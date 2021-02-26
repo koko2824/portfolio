@@ -1,7 +1,9 @@
-import Head from 'next/head'
-
+import Header from './components/Header'
 export default function Home() {
   return (
-          <p className=" text-3xl text-white font-light">hello world</p>
+    <div className="">
+      <Header />
+      <p className=" text-3xl text-white font-light">hello world</p>
+    </div>
   )
 }
