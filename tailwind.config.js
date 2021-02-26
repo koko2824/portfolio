@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blue': '#1A2F52',
+        blue: '#1A2F52',
         'light-green': '#00E6EF',
-        'green': '#00EFC1',
-        'white': '#D6E6F1',
-        'bg': '#1A2F52',
+        green: '#00EFC1',
+        white: '#D6E6F1',
+        bg: '#1A2F52',
       },
       fontFamily: {
-        sans: ['Arial']
-      }
+        sans: ['Arial'],
+      },
     },
   },
   variants: {
