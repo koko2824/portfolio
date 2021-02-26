@@ -6,10 +6,9 @@ interface NavItemProps {
 }
 
 const NavItems = (props: NavItemProps) => {
-  const style = "inline-block p-5 hover:text-green"
   return (
-    <a href={props.href} className={style}>
-      <span className="text-green">-</span> {props.text}
+    <a href={props.href} className=" block p-5 hover:text-light-blue ">
+      <span className=" text-light-blue">-</span> {props.text}
     </a>
   )
 }

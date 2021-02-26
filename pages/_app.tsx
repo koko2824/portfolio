@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Koki's Portfolio </title>
       </Head>
-      <div className="bg-bg w-screen h-screen">
+      <div className=" bg-normal-black w-screen h-screen">
         <Component {...pageProps} />
       </div>
     </>
