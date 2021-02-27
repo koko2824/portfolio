@@ -1,6 +1,5 @@
-import { data } from 'autoprefixer'
-import { resourceUsage } from 'node:process'
-import React, { PropsWithChildren } from 'react'
+import React from 'react'
+import SectionTitle from './atoms/SectionTitle'
 
 interface skillRow {
   rows: {
@@ -16,13 +15,9 @@ const SkillBar = (props: skillRow) => {
   const circles = new Array(11).fill(<div className={` w-2 h-2 rounded-full bg-dark-white `}></div>)
 
   return (
-    <section className={style ? style : 'w-5/6'}>
-      <h2 className="text-white text-4xl">
-        <span className="text-light-blue">- </span>
-        Skills
-        <span className="text-light-blue"> -</span>
-      </h2>
+    <section className={style ? style : 'w-full'}>
       <div className="container text-white mx-auto">
+        <SectionTitle title="My Skills" />
         {rows.map((row, i) => (
           <div className="container flex justify-between items-center py-3" key={i}>
             <div className={textStyle}>{row.title}</div>
