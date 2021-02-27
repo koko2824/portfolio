@@ -16,7 +16,7 @@ const SkillBar = (props: skillRow) => {
   const circles = new Array(11).fill(<div className={` w-2 h-2 rounded-full bg-dark-white `}></div>)
 
   return (
-    <section className={style ? style : "w-5/6"}>
+    <section className={style ? style : 'w-5/6'}>
       <h2 className="text-white text-4xl">
         <span className="text-light-blue">- </span>
         Skills
