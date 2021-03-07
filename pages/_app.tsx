@@ -1,17 +1,8 @@
-import Head from 'next/head'
-import '../styles/globals.css'
+import React from 'react'
+import '../styles/index.css'
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <title>Koki's Portfolio </title>
-      </Head>
-      <div className=" bg-normal-black w-screen">
-        <Component {...pageProps} />
-      </div>
-    </>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp
