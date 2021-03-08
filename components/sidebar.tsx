@@ -40,14 +40,11 @@ export default function Sidebar(props: sidebarProps) {
     )
   } else {
     return (
-      <div
-        className={cx(css``, 'bg-normal-black text-white')}
-        onClick={() => setShow(true)}
-      >
-          <a>
-            <ArrowRight className="absolute top-8 left-8" size={32} />
-          </a>
-          { props.children }
+      <div className={cx(css``, 'bg-normal-black text-white')} onClick={() => setShow(true)}>
+        <a>
+          <ArrowRight className="absolute top-8 left-8" size={32} />
+        </a>
+        {props.children}
       </div>
     )
   }
