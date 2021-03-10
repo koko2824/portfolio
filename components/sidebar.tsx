@@ -28,7 +28,7 @@ export default function Sidebar(props: sidebarProps) {
           className={cx(
             ' absolute top-0 left-0 px-5',
             css`
-              animation: ${slideIn} .3s;
+              animation: ${slideIn} 0.3s;
             `
           )}
         >
@@ -52,7 +52,7 @@ export default function Sidebar(props: sidebarProps) {
             className={cx(
               'absolute top-8 left-8',
               css`
-                animation: ${slideIn} .3s ease-out;
+                animation: ${slideIn} 0.3s ease-out;
               `
             )}
             size={32}
