@@ -10,9 +10,9 @@ const Layout = (props: Props) => {
   const { children } = props
   const iconSize = 28
   const naves = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/' },
-    { name: 'Skills', href: '/' },
+    { name: 'Skills', href: '/skills' },
     { name: 'Contact', href: '/' },
   ]
 
@@ -22,7 +22,7 @@ const Layout = (props: Props) => {
   ]
 
   return (
-    <div>
+    <div className="text-black">
       <div className="w-8/10 absolute top-0 left-0 right-0 mx-auto">
         <nav className="h-20 flex items-center justify-between">
           <div className="text-xl font-bold w-4 h-full flex items-center">
