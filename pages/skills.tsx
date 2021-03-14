@@ -44,7 +44,8 @@ const Skills = () => {
                     className={cx(
                       `relative top-0 left-0 h-px w-${item.percent / 10}/10 bg-primary-main`,
                       css`
-                        animation: ${barAnimation} 1s ease;
+                        animation: ${barAnimation} 2s ease;
+                        animation-delay: .5s;
                       `
                     )}
                   ></div>

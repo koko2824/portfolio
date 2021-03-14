@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { css, cx, keyframes } from '@emotion/css'
 
 interface Props {
   children: ReactElement
@@ -25,8 +26,10 @@ const Layout = (props: Props) => {
     </Link>,
   ]
 
+  const fadeIn = keyframes`from { opacity: 0 }; to { opacity: 1 };`
+
   return (
-    <div className="text-black">
+    <div className={cx("text-black", css`animation: ${fadeIn} 3s ease`)}>
       <div className="w-8/10 absolute top-0 left-0 right-0 mx-auto">
         <nav className="h-20 flex items-center justify-between">
           <div className="text-xl font-bold w-4 h-full flex items-center">
@@ -34,7 +37,7 @@ const Layout = (props: Props) => {
           </div>
           <div className="flex">
             {naves.map((item, i) => (
-              <p className="py-4 px-8 text-lg" key={i}>
+              <p className="py-4 px-8 text-lg hover:opacity-50" key={i}>
                 <Link href={item.href}>{item.name}</Link>
               </p>
             ))}
