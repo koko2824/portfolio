@@ -14,7 +14,8 @@ export default function Index() {
             <h2 className="font-bold text-5xl text-right">Portfolio Site</h2>
           </div>
           <p className="text-gray text-lg pt-8">
-            神奈川県にいるプログラミングが好きな普通の高校生です。<br/>
+            神奈川県にいるプログラミングが好きな普通の高校生です。
+            <br />
             課題が出たのでポートフォリオ作ってみました。
           </p>
         </div>
