@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "fmt": "prettier --write .",
-    "build:css": "npx tailwindcss-cli@latest build ./styles/globals.css -o ./styles/index.css",
-    "deploy" : "gh-pages -d ./.next"
+    "build:css": "npx tailwindcss-cli@latest build ./styles/globals.css -o ./styles/index.css"
   },
   "dependencies": {
     "@emotion/css": "^11.1.3",
