@@ -19,15 +19,18 @@ module.exports = {
         '10/10': '100%',
       },
       colors: {
-        white: '#d6e6f1',
-        'dark-white': '#E0DCDC',
-        'light-blue': '#04c2c9',
-        'dark-blue': '#04c2c9BF',
-        'light-black': '#6B7280BF',
-        'normal-black': '#1f2937',
+        white: '#fafdff',
+        gray: '#7d7d7d',
+        black: '#253237',
+        primary: {
+          main: '#92E3A9',
+          light: '#def7e6',
+        },
       },
       fontFamily: {
-        sans: ['Arial'],
+        RocknRoll: '"RocknRoll One"',
+        Kosugi: 'Kosugi',
+        sans: ['Arial', 'Kosugi', '"Hiragino Sans"'],
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',

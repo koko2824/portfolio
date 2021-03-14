@@ -1,25 +1,29 @@
 import React, { useState } from 'react'
-import Sidebar from '../components/sidebar'
+import Image from 'next/image'
+import Layout from '../components/layout'
 
 export default function Index() {
-  const [show, setShow] = useState(false)
+  const imageSize = 400
   return (
-    <Sidebar>
-      <>
-        <div className="flex flex-col justify-center items-center w-screen h-screen text-center">
-          <h1 className="text-5xl w-full mx-auto">Koki's portfolio site</h1>
-          <p className="text-3xl mt-10 text-dark-blue">
-            I'm a fledgling web developer in high school.
-          </p>
+    <Layout>
+      <div className="h-screen flex items-center justify-center">
+        <div className="w-2/3 ml-auto">
+          <div className="w-6/10">
+            <div className="w-9/10">
+              <h2 className="font-bold text-5xl mb-4">Koki Oshima</h2>
+              <h2 className="font-bold text-5xl text-right">Portfolio Site</h2>
+            </div>
+            <p className="py-10 text-gray">
+              I 'm a Freelance Web Designer & Developer based in Madrid, Spain. I have serious
+              passion for UI effects, animations and creating intuitive, with over a decade of
+              experience.
+            </p>
+          </div>
         </div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-        <div className="h-screen">hello world</div>
-      </>
-    </Sidebar>
+        <div className="mr-auto">
+          <Image src="/images/top.svg" height={imageSize} width={imageSize} />
+        </div>
+      </div>
+    </Layout>
   )
 }
