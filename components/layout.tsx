@@ -16,9 +16,13 @@ const Layout = (props: Props) => {
     { name: 'Contact', href: '/' },
   ]
 
+  // TODO wantedly icon
   const linkIcons = [
-    <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />,
-    <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />,
+    <Link href="https://github.com/koko2824">
+      <a>
+        <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />,
+      </a>
+    </Link>,
   ]
 
   return (
