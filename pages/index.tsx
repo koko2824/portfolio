@@ -13,7 +13,7 @@ export default function Index() {
               <h2 className="font-bold text-5xl mb-4">Koki Oshima</h2>
               <h2 className="font-bold text-5xl text-right">Portfolio Site</h2>
             </div>
-            <p className="py-10 text-gray">
+            <p className="py-4 text-gray text-lg">
               I 'm a Freelance Web Designer & Developer based in Madrid, Spain. I have serious
               passion for UI effects, animations and creating intuitive, with over a decade of
               experience.
