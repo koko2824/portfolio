@@ -36,7 +36,11 @@ const Skills = () => {
                 </p>
                 <p className="text-2xl ml-auto">{item.percent}%</p>
               </div>
-              <div className="border-b-2 border-gray"></div>
+              <div className="">
+                <div className="relative -top-1 left-0 h-px bg-gray">
+                  <div className={`relative top-0 left-0 h-px w-${item.percent / 10}/10 bg-primary-main`}></div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

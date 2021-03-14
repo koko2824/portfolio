@@ -19,6 +19,7 @@ module.exports = {
         '10/10': '100%',
       },
       colors: {
+        // TODO gray-light実装
         white: '#fafdff',
         gray: '#7d7d7d',
         black: '#253237',
