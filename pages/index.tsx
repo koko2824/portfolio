@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 
 export default function Index() {
   const imageSize = 400
+  const myImage = <Image src="/images/top.svg" height={imageSize} width={imageSize} />
   return (
     <Layout>
       <div className="h-screen flex items-center justify-center">
@@ -20,9 +21,7 @@ export default function Index() {
             </p>
           </div>
         </div>
-        <div className="mr-auto">
-          <Image src="/images/top.svg" height={imageSize} width={imageSize} />
-        </div>
+        <div className="mr-auto">{myImage}</div>
       </div>
     </Layout>
   )

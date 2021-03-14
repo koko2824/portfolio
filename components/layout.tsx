@@ -11,7 +11,7 @@ const Layout = (props: Props) => {
   const iconSize = 28
   const naves = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Skills', href: '/skills' },
     { name: 'Contact', href: '/' },
   ]
