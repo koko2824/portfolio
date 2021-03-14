@@ -1,5 +1,5 @@
 import React from 'react'
-import { cx } from '@emotion/css'
+import { cx, css, keyframes } from '@emotion/css'
 import Layout from '../components/layout'
 
 const Skills = () => {
@@ -13,6 +13,8 @@ const Skills = () => {
     { name: 'TailwindCSS', percent: 70, year: 0 },
     { name: 'Firebase', percent: 70, year: 0 },
   ]
+
+  const barAnimation = keyframes` from {width: 0%};`
 
   return (
     <Layout>
@@ -37,8 +39,15 @@ const Skills = () => {
                 <p className="text-2xl ml-auto">{item.percent}%</p>
               </div>
               <div className="">
-                <div className="relative -top-1 left-0 h-px bg-gray">
-                  <div className={`relative top-0 left-0 h-px w-${item.percent / 10}/10 bg-primary-main`}></div>
+                <div className="relative -top-1 left-0 h-px">
+                  <div
+                    className={cx(
+                      `relative top-0 left-0 h-px w-${item.percent / 10}/10 bg-primary-main`,
+                      css`
+                        animation: ${barAnimation} 1s ease;
+                      `
+                    )}
+                  ></div>
                 </div>
               </div>
             </div>
