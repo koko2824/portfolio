@@ -20,8 +20,13 @@ const Layout = (props: Props) => {
   // TODO wantedly icon
   const linkIcons = [
     <Link href="https://github.com/koko2824">
-      <a>
-        <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />,
+      <a target="break">
+        <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />
+      </a>
+    </Link>,
+    <Link href="https://www.wantedly.com/id/kokokiki">
+      <a target="break">
+        <Image src={'/images/wantedly.png'} height={iconSize} width={iconSize} />
       </a>
     </Link>,
   ]
