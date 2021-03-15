@@ -16,7 +16,7 @@ export default function Index() {
           <p className="text-gray text-lg pt-8">
             神奈川県にいるプログラミングが好きな普通の高校生です。
             <br />
-            課題が出たのでポートフォリオ作ってみました。
+            課題が出たのでポートフォリオサイトを作ってみました。
           </p>
         </div>
         <div className="ml-auto">{myImage}</div>
