@@ -21,7 +21,7 @@ const Skills = () => {
       <div className="h-screen py-32">
         <div className="mt-10">
           <h3 className="text-4xl font-bold tracking-wider">My Skills</h3>
-          <p className="text-gray text-lg py-2">web frontendを中心にweb系の技術を習得しています</p>
+          <p className="text-gray text-lg py-2">Web Frontendを中心にWeb系の技術を習得しています。</p>
         </div>
         <div className="w-full mt-10">
           {skills.map((item, i) => (
