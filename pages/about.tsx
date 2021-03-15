@@ -20,7 +20,10 @@ const About = () => {
           <p className="pt-4 text-gray text-lg">
             その後、実際に実務を体験したいと思い、インターンシップに参加。
             <br />
-            現在はインターン先である <a href="https://3-shake.com">3-shake.com</a>
+            現在はインターン先である
+            <a className="text-primary-main" href="https://3-shake.com" target="break">
+              3-shake.com
+            </a>
             でフロントエンドエンジニアとして活動中です。
           </p>
           <p className="pt-4 text-gray text-lg">趣味はRPGゲームとサッカー観戦。</p>

@@ -34,14 +34,7 @@ const Layout = (props: Props) => {
   const fadeIn = keyframes`from { opacity: 0 }; to { opacity: 1 };`
 
   return (
-    <div
-      className={cx(
-        'text-black',
-        css`
-          animation: ${fadeIn} 3s ease;
-        `
-      )}
-    >
+    <div className={cx('text-black')}>
       <div className="w-8/10 absolute top-0 left-0 right-0 mx-auto">
         <nav className="h-20 flex items-center justify-between">
           <div className="text-xl font-bold w-4 h-full flex items-center">
@@ -63,7 +56,16 @@ const Layout = (props: Props) => {
           </div>
         </nav>
       </div>
-      <div className="w-8/10 mx-auto">{children}</div>
+      <div
+        className={cx(
+          'w-8/10 mx-auto',
+          css`
+            animation: ${fadeIn} 2s ease;
+          `
+        )}
+      >
+        {children}
+      </div>
     </div>
   )
 }
