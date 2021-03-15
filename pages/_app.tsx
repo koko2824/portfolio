@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+        <title>Koki's Portfolio</title>
       </Head>
       <div className="w-screen bg-white">
         <Component {...pageProps} />
