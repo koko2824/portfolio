@@ -1,8 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
+import type { NextPage } from 'next'
+import type { AppProps } from 'next/app'
 import '../styles/index.css'
 
-function MyApp({ Component, pageProps }) {
+export const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>

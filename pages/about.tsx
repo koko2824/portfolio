@@ -1,8 +1,9 @@
 import React from 'react'
+import type { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/layout'
 
-const About = () => {
+export const About: NextPage = () => {
   const imageSize = 500
   const myImage = <Image src="/images/about/about.png" height={imageSize} width={imageSize} />
   // TODO typography component作る
@@ -33,5 +34,3 @@ const About = () => {
     </Layout>
   )
 }
-
-export default About

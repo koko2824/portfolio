@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/layout'
 
-export default function Index() {
+export const Index: NextPage = () => {
   const imageSize = 500
   const myImage = <Image src="/images/index/main.png" height={imageSize} width={imageSize} />
   return (

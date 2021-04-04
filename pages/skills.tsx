@@ -1,8 +1,9 @@
 import React from 'react'
 import { cx, css, keyframes } from '@emotion/css'
+import type { NextPage } from 'next'
 import Layout from '../components/layout'
 
-const Skills = () => {
+export const Skills: NextPage = () => {
   const skills = [
     { name: 'HTML/CSS', percent: 90, year: 2 },
     { name: 'JavaScript', percent: 90, year: 2 },
@@ -60,5 +61,3 @@ const Skills = () => {
     </Layout>
   )
 }
-
-export default Skills
