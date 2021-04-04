@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/layout'
 
-export const Index: NextPage = () => {
+const Index: NextPage = () => {
   const imageSize = 500
   const myImage = <Image src="/images/index/main.png" height={imageSize} width={imageSize} />
   return (
@@ -25,3 +25,5 @@ export const Index: NextPage = () => {
     </Layout>
   )
 }
+
+export default Index

@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import '../styles/index.css'
 
-export const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
