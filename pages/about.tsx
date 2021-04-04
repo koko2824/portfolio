@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 const About = () => {
   const imageSize = 500
-  const myImage = <Image src="/images/about.svg" height={imageSize} width={imageSize} />
+  const myImage = <Image src="/images/about/about.png" height={imageSize} width={imageSize} />
   // TODO typography component作る
   return (
     <Layout>
