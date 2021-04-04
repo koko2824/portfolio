@@ -1,9 +1,11 @@
 import React from 'react'
 import { cx, css, keyframes } from '@emotion/css'
+import type { NextPage } from 'next'
 import Layout from '../components/layout'
+import type { Skill } from '../models/skill'
 
-const Skills = () => {
-  const skills = [
+const Skills: NextPage = () => {
+  const skills: Skill[] = [
     { name: 'HTML/CSS', percent: 90, year: 2 },
     { name: 'JavaScript', percent: 90, year: 2 },
     { name: 'Python', percent: 80, year: 1 },
