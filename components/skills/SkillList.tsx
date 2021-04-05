@@ -1,6 +1,7 @@
 import React from 'react'
 import { cx, css, keyframes } from '@emotion/css'
 import type { Skill as SkillType } from '../../models/skill'
+import { differenceInMonths } from 'date-fns'
 
 interface Props {
   skills: SkillType[]
@@ -9,6 +10,21 @@ interface Props {
 export const SkillList: React.VFC<Props> = (props) => {
   const { skills } = props
   const barAnimation = keyframes` from {width: 0%};`
+
+  const period = (d: string) => {
+    const periodM = differenceInMonths(new Date(), new Date(d))
+    const periodY = (periodM / 12) | 0
+    const result: { msg: string; period: number } = periodY
+      ? { msg: 'Year', period: periodY }
+      : { msg: 'Month', period: periodM }
+
+    return (
+      <span className="text-base font-light text-gray ml-4">
+        <span className="text-lg">{result.period}</span>
+        {result.msg}
+      </span>
+    )
+  }
 
   return (
     <div className="w-full mt-10">
@@ -19,7 +35,7 @@ export const SkillList: React.VFC<Props> = (props) => {
           <div className="flex">
             <p className="text-2xl mb-2 w-1/2">
               {item.name}
-              <span className="text-base font-light text-gray ml-4">{item.year}YEAR</span>
+              {period(item.date)}
             </p>
             <p className="text-2xl ml-auto">{item.percent}%</p>
           </div>
