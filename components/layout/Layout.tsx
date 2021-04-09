@@ -7,7 +7,7 @@ interface Props {
   children: ReactElement
 }
 
-const Layout = (props: Props) => {
+export const Layout: React.VFC<Props> = (props) => {
   const { children } = props
   const iconSize = 28
   const naves = [
@@ -69,5 +69,3 @@ const Layout = (props: Props) => {
     </div>
   )
 }
-
-export default Layout

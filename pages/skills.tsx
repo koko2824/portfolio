@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import { SkillList } from '../components/skills'
 import type { Skill } from '../models/skill'
 
