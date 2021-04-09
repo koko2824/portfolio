@@ -1,7 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 const About: NextPage = () => {
   const imageSize = 500
