@@ -17,7 +17,6 @@ export const Layout: React.VFC<Props> = (props) => {
     { name: 'Contact', href: '/' },
   ]
 
-  // TODO wantedly icon
   const linkIcons = [
     <Link href="https://github.com/koko2824">
       <a target="break">
