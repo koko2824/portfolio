@@ -11,7 +11,7 @@ export const SkillList: React.VFC<Props> = (props) => {
   const { skills } = props
   const barAnimation = keyframes` from {width: 0%};`
 
-  const period = (d: string) => {
+  const period = (d: string): JSX.Element => {
     const periodM = differenceInMonths(new Date(), new Date(d))
     const periodY = (periodM / 12) | 0
     const result: { msg: string; period: number } = periodY
@@ -31,6 +31,7 @@ export const SkillList: React.VFC<Props> = (props) => {
       {skills.map((item, i) => (
         <div
           className={cx('w-1/2 py-8 inline-block tracking-wider', i % 2 === 0 ? ' pr-10' : 'pl-10')}
+          key={i}
         >
           <div className="flex">
             <p className="text-2xl mb-2 w-1/2">

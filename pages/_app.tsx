@@ -14,7 +14,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
-        <title>Koki's Portfolio</title>
+        <title>Koki&apos;s Portfolio</title>
       </Head>
       <div className="w-screen bg-white">
         <Component {...pageProps} />
