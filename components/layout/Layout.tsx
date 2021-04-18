@@ -16,21 +16,6 @@ export const Layout: React.VFC<Props> = (props) => {
     { name: 'Skills', href: '/skills' },
     { name: 'Contact', href: '/' },
   ]
-
-  // TODO wantedly icon
-  const linkIcons = [
-    <Link href="https://github.com/koko2824">
-      <a target="break">
-        <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />
-      </a>
-    </Link>,
-    <Link href="https://www.wantedly.com/id/kokokiki">
-      <a target="break">
-        <Image src={'/images/wantedly.png'} height={iconSize} width={iconSize} />
-      </a>
-    </Link>,
-  ]
-
   const fadeIn = keyframes`from { opacity: 0 }; to { opacity: 1 };`
 
   return (
@@ -48,11 +33,20 @@ export const Layout: React.VFC<Props> = (props) => {
             ))}
           </div>
           <div className="flex">
-            {linkIcons.map((item, i) => (
-              <div className="px-2" key={i}>
-                {item}
-              </div>
-            ))}
+            <div className="px-2">
+              <Link href="https://github.com/koko2824">
+                <a target="break">
+                  <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />
+                </a>
+              </Link>
+            </div>
+            <div className="px-2">
+              <Link href="https://www.wantedly.com/id/kokokiki">
+                <a target="break">
+                  <Image src={'/images/wantedly.png'} height={iconSize} width={iconSize} />
+                </a>
+              </Link>
+            </div>
           </div>
         </nav>
       </div>
