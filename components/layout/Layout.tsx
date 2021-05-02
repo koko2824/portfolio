@@ -14,7 +14,6 @@ export const Layout: React.VFC<Props> = (props) => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Skills', href: '/skills' },
-    { name: 'Contact', href: '/' },
   ]
   const fadeIn = keyframes`from { opacity: 0 }; to { opacity: 1 };`
 
