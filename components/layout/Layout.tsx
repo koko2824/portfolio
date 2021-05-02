@@ -6,15 +6,19 @@ import { css, cx, keyframes } from '@emotion/css'
 interface Props {
   children: ReactElement
 }
+const naves: { name: string; href: string }[] = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Skills', href: '/skills' },
+]
+const Services: { link: string; path: string }[] = [
+  { link: 'https://github.com/koko2824', path: '/images/github.svg' },
+  { link: 'https://www.wantedly.com/id/kokokiki', path: '/images/wantedly.png' },
+]
 
 export const Layout: React.VFC<Props> = (props) => {
   const { children } = props
   const iconSize = 28
-  const naves = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Skills', href: '/skills' },
-  ]
   const fadeIn = keyframes`from { opacity: 0 }; to { opacity: 1 };`
 
   return (
@@ -32,20 +36,15 @@ export const Layout: React.VFC<Props> = (props) => {
             ))}
           </div>
           <div className="flex">
-            <div className="px-2">
-              <Link href="https://github.com/koko2824">
-                <a target="break">
-                  <Image src={'/images/github.svg'} height={iconSize} width={iconSize} />
-                </a>
-              </Link>
-            </div>
-            <div className="px-2">
-              <Link href="https://www.wantedly.com/id/kokokiki">
-                <a target="break">
-                  <Image src={'/images/wantedly.png'} height={iconSize} width={iconSize} />
-                </a>
-              </Link>
-            </div>
+            {Services.map((item, i) => (
+              <div className="px-2" key={i}>
+                <Link href={item.link}>
+                  <a target="break">
+                    <Image src={item.path} height={iconSize} width={iconSize} />
+                  </a>
+                </Link>
+              </div>
+            ))}
           </div>
         </nav>
       </div>
