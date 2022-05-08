@@ -1,5 +1,6 @@
 export interface Skill {
   name: string
   percent: number
-  date: string
+  start: string
+  end?: string
 }
