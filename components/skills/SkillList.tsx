@@ -7,25 +7,26 @@ interface Props {
   skills: SkillType[]
 }
 
+const period = (start: string, end: string | undefined): JSX.Element => {
+  const periodM = end
+    ? differenceInMonths(new Date(end), new Date(start))
+    : differenceInMonths(new Date(), new Date(start))
+  const periodY = (periodM / 12) | 0
+  const result: { msg: string; period: number } = periodY
+    ? { msg: 'Year', period: periodY }
+    : { msg: 'Month', period: periodM }
+
+  return (
+    <span className="text-base font-light text-gray ml-4">
+      <span className="text-lg">{result.period}</span>
+      {result.msg}
+    </span>
+  )
+}
+
 export const SkillList: React.VFC<Props> = (props) => {
   const { skills } = props
   const barAnimation = keyframes` from {width: 0%};`
-
-  const period = (d: string): JSX.Element => {
-    const periodM = differenceInMonths(new Date(), new Date(d))
-    const periodY = (periodM / 12) | 0
-    const result: { msg: string; period: number } = periodY
-      ? { msg: 'Year', period: periodY }
-      : { msg: 'Month', period: periodM }
-
-    return (
-      <span className="text-base font-light text-gray ml-4">
-        <span className="text-lg">{result.period}</span>
-        {result.msg}
-      </span>
-    )
-  }
-
   return (
     <div className="w-full mt-10">
       {skills.map((item, i) => (
@@ -36,7 +37,7 @@ export const SkillList: React.VFC<Props> = (props) => {
           <div className="flex">
             <p className="text-2xl mb-2 w-1/2">
               {item.name}
-              {period(item.date)}
+              {period(item.start, item.end)}
             </p>
             <p className="text-2xl ml-auto">{item.percent}%</p>
           </div>

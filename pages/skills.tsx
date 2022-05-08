@@ -5,12 +5,12 @@ import { SkillList } from '../components/skills'
 import type { Skill } from '../models/skill'
 
 const skills: Skill[] = [
-  { name: 'Python', percent: 60, date: '2019/12' },
-  { name: 'TypeScript', percent: 80, date: '2021/1' },
-  { name: 'Go', percent: 70, date: '2020/9' },
-  { name: 'React', percent: 80, date: '2020/11' },
-  { name: 'TailwindCSS', percent: 80, date: '2021/1' },
-  { name: 'Firebase', percent: 70, date: '2021/1' },
+  { name: 'Python', percent: 60, start: '2019/12', end: '2020/8' },
+  { name: 'TypeScript', percent: 80, start: '2021/1' },
+  { name: 'Go', percent: 70, start: '2020/9', end: '2021/3' },
+  { name: 'React', percent: 80, start: '2020/11' },
+  { name: 'TailwindCSS', percent: 80, start: '2021/1' },
+  { name: 'Firebase', percent: 70, start: '2021/1', end: '2022/2' },
 ]
 
 const Skills: NextPage<{ items: Skill[] }> = ({ items = skills }) => {
